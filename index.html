@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pizza4P'S</title>
+        <!-- link các thư mục base.css, main.css -->
+        <link rel="stylesheet" href="./assets/css/base.css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <!-- link cấu hình mặc định ban đầu -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <!-- link phông chữ -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <!-- link thư mục icon -->
+        <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.4-web/css/all.css">
+        <!-- link thư mục icon -->
+        <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+        <!-- link thư mục grid grid phải đứng trên responsive -->
+        <link rel="stylesheet" href="./assets/css/grid.css">
+        <!-- link thư mục responsive -->
+        <link rel="stylesheet" href="./assets/css/responsive.css">
+        <!------ link favicon icon------->
+        <link rel="icon web" type="image/png" href="./assets/img/favicon.ico"/>
+    </head>
+    <body>
+        <div class="main">
+            <header class="header">
+                    <!--------------- header1---------------->
+                    <div class="header__wrap">
+                        <div class="header__interview">
+                            <a href="" class="header__logo">
+                                <img src="./assets/img/pizza.png" alt="" class="header__logo-img">
+                            </a>
+                        </div>
+                        <div class="header__infor">
+                            <button class="header__info-btn-country"></button>
+                            <button class="header__info-btn-user js-login"></button>
+                        </div>
+                    </div>
+                    <!--------------- header2---------------->
+                    <div class="header__title">
+                        <div class="header__location js-address">
+                            <i class="fas fa-map-marker-alt header__location-icon"></i>
+                            <h3 class="header__location-text ">Vui lòng nhập địa chỉ</h3>
+                        </div>
+                        <div onclick="myFunction()" class="header__receipt">
+                            <span class="header__receipt-text hide-on-mobile">0 vnđ (không bao gồm thuế)</span>
+                            <div class="header__receipt-cart">
+                                <i class="fas fa-shopping-cart header-cart header__receipt-cart-icon"></i>
+                            </div>
+                         <!--------------- cart header-notice---------------->
+                            <span class="header__receipt-notice">0</span>
+                        </div>
+                        <!--------------- cart header-toast message---------------->
+                        <div id="toast" >
+                            <!-- <div class=" toast header__toastmess">
+                                <div class="toastmess__body"> 
+                                   <h3 class="toastmess__body-title">Giỏ hàng của bạn đang trống</h3>
+                                   <p class="toastmess__body-content">Hãy khám phá thực đơn giao món đa dạng của chúng tôi để tìm cho mình lựa chọn phù hợp nhé!</p>
+                               </div>
+                           </div> -->
+                        </div>
+                    </div>
+                    <!--------------- header3---------------->
+                    <div class="header__menu">
+                        <ul class="header__menu-list">
+                            <div class="header__menu-item active" ><a href="#"  class="header_menu_item-link">Bánh Pizza</a></div>
+                            <div class="header__menu-item" ><a href="#" class="header_menu_item-link">Khai vị</a></div>
+                            <div class="header__menu-item"><a href="#"  class="header_menu_item-link">Salad</a></div>
+                            <div class="header__menu-item"><a href="#" class="header_menu_item-link">Món Chính/ Mì Ý</a></div>
+                            <div class="header__menu-item"><a href="#" class="header_menu_item-link">Tráng Miệng</a></div>
+                            <div class="header__menu-item"><a href="#" class="header_menu_item-link">Thức uống</a></div>
+                            <div class="header__menu-item"><a href="#" class="header_menu_item-link">Món thêm</a></div>
+                            <div class="header__menu-item">
+                                <a href="#" class="header_navbar_item-img"><img src="./assets/img/market.svg" alt="Market" class="header_menu_item-img"></a>
+                            </div>
+                        </ul>                     
+                    </div>
+            </header>
+            <!-----------------content------------------->   
+            <div class="container">
+                <div class="grid wide tab-pane active">
+                    <div class="grid__row grid__row-padding">
+                        <div class="grid__column-4 grid__column-4-space  ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/banh1.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Pizza Bambino từ Ý cùng Cá ngừ Confit <br class="hide-on-tablet" > Nhà làm và Bắp ngọt</h3>
+                                    <span class="container__content-price">từ 230,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Pizza ghép</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/banh2.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Bạch Tuộc kiểu Gracia từ Tây Ban Nha <br class="hide-on-tablet"> Pizza</h3>
+                                    <span class="container__content-price">từ 368,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Pizza ghép</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/banh3.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Sò điệp Hokkaido Gratin với xốt Miso <br class="hide-on-tablet"> ngọt Pizza</h3>
+                                    <span class="container__content-price">từ 378,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Pizza ghép</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/banh4.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">(Chỉ có tại chi nhánh Đà Nẵng) <br> Hawaiian 4P’s kiểu Đà Nẵng Pizza</h3>
+                                    <span class="container__content-price">từ 150,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Pizza ghép</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/banh5.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">(Chỉ có tại chi nhánh Đà Nẵng) Xúc xích <br class="hide-on-tablet"> cay tự làm Pizza</h3>
+                                    <span class="container__content-price">từ 160,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Pizza ghép</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/banh6.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">(Chỉ có tại chi nhánh Đà Nẵng) Trứng và <br class="hide-on-tablet"> cải bó xôi với Phô mai Ricotta Pizza</h3>
+                                    <span class="container__content-price">từ 150,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Pizza ghép</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/banh7.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Thịt bò cay kiểu Kebab Pizza</h3>
+                                    <span class="container__content-price">từ 248,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Pizza ghép</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/banh8.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Phô mai Burrata Margherita thịt nguội <br class="hide-on-tablet"> Pizza</h3>
+                                    <span class="container__content-price">từ 390,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Pizza ghép</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/banh9.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">5 loại phô mai nhà làm Pizza </h3>
+                                    <span class="container__content-price">từ 280,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid wide tab-pane">
+                    <div class="grid__row grid__row-padding">
+                        <div class="grid__column-4 grid__column-4-space  ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/khaivi1.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Set Camillo Natural Wine and Platter <br class="hide-on-tablet" > </h3>
+                                    <span class="container__content-price">từ 980,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/khaivi2.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Set Il Vei Natural Wine and Platter <br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 880,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/khaivi3.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Tiệc 3 loại thịt nguội và phô mai nhà  <br class="hide-on-tablet"> làm</h3>
+                                    <span class="container__content-price">từ 270,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/khaivi4.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">(Chỉ có tại chi nhánh Đà Nẵng) Pa tê <br> gan gà</h3>
+                                    <span class="container__content-price">từ 60,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/khaivi5.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">(Chỉ có tại chi nhánh Đà Nẵng) Khoai <br class="hide-on-tablet"> tây nướng nghiền</h3>
+                                    <span class="container__content-price">từ 58,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/khaivi6.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">(Chỉ có tại chi nhánh Đà Nẵng) Phô mai <br class="hide-on-tablet"> Burrata và xốt bò bằm cay (S)</h3>
+                                    <span class="container__content-price">từ 70,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/khaivi7.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">(Chỉ có tại chi nhánh Đà Nẵng) Phô mai <br class="hide-on-tablet"> Burrata và xốt bò bằm cay (L)</h3>
+                                    <span class="container__content-price">từ 128,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/khaivi8.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Gà rán gia vị phương Đông với xốt ớt <br class="hide-on-tablet">Jalapeño nhà làm (2 miếng)</h3>
+                                    <span class="container__content-price">từ 88,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/khaivi9.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Các loại phô mai nhà làm (L) </h3>
+                                    <span class="container__content-price">từ 174,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid wide tab-pane">
+                    <div class="grid__row grid__row-padding">
+                        <div class="grid__column-4 grid__column-4-space  ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/salad1.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Rau xanh thuần chay với xốt thảo mộc<br class="hide-on-tablet" >'Green Goddess' nhà làm Salad</h3>
+                                    <span class="container__content-price">từ 78,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/salad2.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Rau cải xoăn hữu cơ với phô mai Lactic <br class="hide-on-tablet"> nhà làm và các loại hạt ngào đường</h3>
+                                    <span class="container__content-price">từ 72,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/salad3.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Phô mai Burrata kèm thịt nguội và trái<br class="hide-on-tablet">cây nhiệt đới Salad (nhỏ)</h3>
+                                    <span class="container__content-price">từ 120,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/salad4.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Cá hồi, bơ và phô mai Ricotta Salad <br> </h3>
+                                    <span class="container__content-price">từ 145,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/salad5.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Tôm Bơ Salad <br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 98,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/salad6.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Rau xanh với xốt tự chế biến Salad <br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 75,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/salad7.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Phô mai Mozzarella nhà làm và cà chua <br class="hide-on-tablet">Đà Lạt Salad </h3>
+                                    <span class="container__content-price">từ 94,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/salad8.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Phô mai Burrata kèm lá Rocket và Cà <br class="hide-on-tablet">chua Salad</h3>
+                                    <span class="container__content-price">từ 174,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/salad9.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Lá Rocket và Cà chua Salad </h3>
+                                    <span class="container__content-price">từ 74,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid wide tab-pane">
+                    <div class="grid__row grid__row-padding">
+                        <div class="grid__column-4 grid__column-4-space  ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/my1.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Cơm ‘Doria’ Hải sản Đặc biệt <br class="hide-on-tablet" > </h3>
+                                    <span class="container__content-price">từ 178,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/my2.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Bò hầm với khoai tây nghiền và rau củ <br class="hide-on-tablet"> nướng</h3>
+                                    <span class="container__content-price">từ 234,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/my3.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">(Chỉ có tại chi nhánh Đà Nẵng) Mì Ý Tôm <br class="hide-on-tablet">tỏi cay</h3>
+                                    <span class="container__content-price">từ 178,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/my4.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Cơm Risotto sò điệp với đu đủ xanh và <br>súp lơ</h3>
+                                    <span class="container__content-price">từ 150,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/my5.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Cà ri xanh nhà làm <br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 160,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/my6.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Cơm Ý Risotto mực với cà chua sấy khô <br class="hide-on-tablet"> và xốt Aioli nhà làm</h3>
+                                    <span class="container__content-price">từ 174,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/my7.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Mì Ý xốt kem với cua và xốt cà chua</h3>
+                                    <span class="container__content-price">từ 233,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/my8.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Mì Ý xốt cà chua với phô mai <br class="hide-on-tablet"> Mascarpone nhà làm</h3>
+                                    <span class="container__content-price">từ 140,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/my9.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Mì Ý nghêu và xốt quế tây </h3>
+                                    <span class="container__content-price">từ 150,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid wide tab-pane">
+                    <div class="grid__row grid__row-padding">
+                        <div class="grid__column-4 grid__column-4-space  ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/trangmieng1.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Pudding kem trứng (90g) <br class="hide-on-tablet" > </h3>
+                                    <span class="container__content-price">từ 26,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/trangmieng2.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Bánh matcha pudding (90g) <br class="hide-on-tablet"></h3>
+                                    <span class="container__content-price">từ 28,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/trangmieng3.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Sữa chua xốt dâu (90g) <br class="hide-on-tablet"></h3>
+                                    <span class="container__content-price">từ 18,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/trangmieng4.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Sữa chua xốt chanh dây (90g) <br></h3>
+                                    <span class="container__content-price">từ 18,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/trangmieng5.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Sữa chua ít đường (90g) <br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 18,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/trangmieng6.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Sữa chua không đường (90g) <br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 18,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/trangmieng7.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Sữa chua kiểu Hy Lạp (90g)</h3>
+                                    <span class="container__content-price">từ 36,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/trangmieng8.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Bánh phô mai kép <br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 68,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid wide tab-pane">
+                    <div class="grid__row grid__row-padding">
+                        <div class="grid__column-4 grid__column-4-space  ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/thucuong1.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Bộ 6 loại bia Original của 4P's <br class="hide-on-tablet" ></h3>
+                                    <span class="container__content-price">từ 398,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/thucuong2.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Rượu Sake tự nhiên Niida-honke (1.8L) <br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 1,600,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/thucuong3.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Il Vei Ortrugo 2019 (Vang trắng) <br class="hide-on-tablet"></h3>
+                                    <span class="container__content-price">từ 680,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/thucuong4.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Donati Camillo Bandita (Vang đỏ sủi <br>bọt nhẹ)</h3>
+                                    <span class="container__content-price">từ 780,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/thucuong5.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Donati Camillo Malasia (vang trắng sủi <br class="hide-on-tablet"> bọt nhẹ)</h3>
+                                    <span class="container__content-price">từ 780,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/thucuong6.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">White Sangria<br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 250,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/thucuong7.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Red Sangria</h3>
+                                    <span class="container__content-price">từ 250,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/thucuong8.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Nước ép thải độc rau rocket tự nhiên <br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 54,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/thucuong9.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Nước ép dưa hấu</h3>
+                                    <span class="container__content-price">từ 44,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid wide tab-pane">
+                    <div class="grid__row grid__row-padding">
+                        <div class="grid__column-4 grid__column-4-space  ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/monthem1.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Phô mai Burrata nhà làm (150g) <br class="hide-on-tablet" > </h3>
+                                    <span class="container__content-price">từ 100,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/monthem2.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Phô mai Burrata nhà làm (75g) <br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 50,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/monthem3.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Phô mai Mozzarella (90g)<br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 60,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/monthem4.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Phô mai Mozzarella (50g) <br> </h3>
+                                    <span class="container__content-price">từ 40,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/monthem5.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Xốt quế tây và tỏi <br class="hide-on-tablet"> từ 25,000 vnđ</h3>
+                                    <span class="container__content-price">từ 160,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/monthem6.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Xốt thì là ngọt <br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 25,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/monthem7.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Xốt kem sữa whey</h3>
+                                    <span class="container__content-price">từ 25,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/monthem8.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Xốt tương đậu nành <br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 25,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/monthem9.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Xốt giấm Balsamic </h3>
+                                    <span class="container__content-price">từ 25,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid wide tab-pane">
+                    <div class="grid__row grid__row-padding">
+                        <div class="grid__column-4 grid__column-4-space  ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/market1.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Pizza 4 phô mai đông lạnh <br class="hide-on-tablet" > </h3>
+                                    <span class="container__content-price">từ 107,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/market2.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Pizza salami milano đông lạnh <br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 107,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/market3.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Pizza Gà Teriyaki đông lạnh<br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 107,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/market4.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Pizza Margherita đông lạnh <br> </h3>
+                                    <span class="container__content-price">từ 95,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/market5.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Mì Ý Lasagna đông lạnh <br class="hide-on-tablet"></h3>
+                                    <span class="container__content-price">từ 125,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/market6.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Mì Ý cà chua đông lạnh <br class="hide-on-tablet"></h3>
+                                    <span class="container__content-price">từ 120,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note">Mới</h3>
+                                <img src="./assets/img/market7.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Mì Ý cua kem cà chua đông lạnh</h3>
+                                    <span class="container__content-price">từ 210,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/market8.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Mì Ý bolognese đông lạnh <br class="hide-on-tablet"> </h3>
+                                    <span class="container__content-price">từ 125,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-4 grid__column-4-space ">
+                            <div class="container__img">
+                                <h3 class="container__note-suggest">Gợi ý</h3>
+                                <img src="./assets/img/market9.png" alt="" class="container__img-item">
+                            </div>
+                            <div class="container__list">
+                                <div class="container__content">
+                                    <h3 class="container__content-write">Rượu Sake tự nhiên Niida-honke (1.8L)</h3>
+                                    <span class="container__content-price">từ 1,600,000 vnđ</span>
+                                </div>
+                                <div class="container__button">
+                                    <button class="container__button-btn-white">
+                                        <span class="container__button-write">Xem thêm</span>
+                                    </button>
+                                    <button class="container__button-btn-blue">
+                                        <span class="container__button-write">Chọn</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-----------------footer------------------->   
+                <footer class="footer__wrap" >
+                    <div class="grid wide">
+                        <div class="grid__row">
+                            <div class="grid__column-8-footer">
+                                <div class="footer-left">
+                                    <div class="grid__row-left">
+                                        <div class="grid__column-4-10">
+                                            <div class="footer__first-company">
+                                                <a href="" class=""><img src="./assets/img/pizza.png" alt="Pizza" class="footer__first-logo"></a>
+                                                <span class="footer__first-name-company">Công ty cổ phần PIZZA 4PS</span>
+                                            </div>
+                                            <div class="footer__first-company">
+                                                <span class="footer__first-address">Địa chỉ</span>
+                                                <span class="footer__first-name-address">8/13-8/15-8/17 Lê Thánh Tôn, Bến Nghé, quận 1, thành phố Hồ Chí Minh</span>
+                                            </div>
+                                            <div class="footer__first-company">
+                                                <p class="footer__first-call">Gọi vào Đường Dây Nóng để được hỗ trợ thêm</p>
+                                                <a href="" class="footer__first-phone">
+                                                    <i class="fas fa-phone-alt"></i>
+                                                    +84 28 3622 0500
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="grid__column-4-10">
+                                            <div class="footer_second-certifi">
+                                                <span class="footer_second-certifi-secure">Giấy chứng nhận CSĐĐKATTP</span>
+                                                <span class="footer_second-certifi-number">Số 2895/2018/ATTP-CNĐK do Ban Quản lý An toàn thực phẩm thành phố Hồ Chí Minh cấp ngày 05/07/2018</span>
+                                            </div>
+                                            <div class="footer_second-certifi">
+                                                <span class="footer_second-certifi-manage">Giấy chứng nhận ĐKKD</span>
+                                                <span class="footer_second-certifi-number">Số 0313168515 do Sở Kế Hoạch và Đầu tư cấp ngày 19/03/2015</span>
+                                            </div>
+                                        </div>
+                                        <div class="grid__column-4-10 grid__column-4-10-fixed">
+                                            <div class="footer__third-rule">
+                                                <span class="footer__third-policy" >Chính sách &amp; Quy định</span>
+                                                <ul class="footer__third-service">
+                                                    <li>
+                                                        <a href="">Chính sách & quy định chung</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">Chính sách thanh toán</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">Chính sách bảo mật</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="footer__third-rule">
+                                                <span class="footer__third-policy-two" >Dịch vụ khách hàng</span>
+                                                <ul class="footer__third-service-two">
+                                                    <li>
+                                                        <a href=""><a href="">Chính sách giao hàng</a></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">Chính sách đổi trả và hoàn tiền</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid__column-4-footer">
+                                <div class="footer-right">
+                                    <div class="footer__fourth">
+                                        <p class="footer__fourth-information">Hãy là người đầu tiên nhận được thông tin mới nhất từ chúng tôi</p>
+                                        <form action="">
+                                            <div class="footer__input">
+                                                <input type="email" class="footer__fourth-in" placeholder="Nhập email của bạn vào đây" value="">
+                                                <button type="submit" class="footer__fourth-resgister" >Đăng ký</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="footer__fourth-two">
+                                        <div class="footer__fourth-two-wrap">
+                                            <p class="footer__fourth-two-follow" >Theo dõi chúng tôi trên mạng xã hội</p>
+                                            <ul class="footer__fourth-two-icon footer__fourth-two-style">
+                                                <li>
+                                                    <a href="" class="footer__fb ">
+                                                        <i class="fab fa-facebook footer__fourth-two-color"></i>                                               
+                                                    </a >
+                                                </li>
+                                                <li>
+                                                    <a href="" class="footer__insta footer__fourth-two-color">
+                                                        <i class="fab fa-instagram"></i>                                                
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="footer__wifi footer__fourth-two-color">
+                                                        <i class="fab fa-twitter"></i>                                               
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>                               
+                                        <a href="" class=""><img src="./assets/img/certifi.png" alt="certifi" class="footer__fourth-two-img"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </footer>
+                <div class="finally">
+                    <p class="finally_text">
+                        Bản quyền © 2021 Pizza 4P’s. Đã đăng ký Bản quyền
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <!--------------- login modal for header1---------------->
+        <div class="modal js-modal">
+            <div class="modal__container js-modal-container">
+                <div class="modal__container-wrap">
+                    <!-- dấu X bên trên phần header  -->
+                    <div class="modal__close js-modal-close ">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <!-- phần header login modal  -->
+                    <header class="modal__header">
+                        <img src="./assets/img/pizza.png" alt="" class="modal__header-img">
+                        <h3 class="modal__header-login">Đăng nhập</h3>
+                    </header>
+                    <!-- phần main chính  -->
+                    <form action="" method="POST" class="modal__body" id="form-1">
+                        <div class="modal__body-email form-group ">
+                            <input  type="text" class="modal-input form-control" id='fullname' placeholder="*Địa chỉ email">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="modal__body-passwd form-group">
+                            <input  type="password" class="modal-input form-control" id='fullpasswd' placeholder="*Mật khẩu">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="modal__body-note">
+                            <label for="" class="modal__body-note-tick">
+                                <input type="checkbox" class="modal__body-note-input">
+                                <span class="modal__body-note-write">Ghi nhớ</span>
+                            </label>
+                            <a href="" class="modal__body-note-forgetpaswd">
+                                Quên mật khẩu?
+                            </a>
+                        </div>
+                        <div class="modal__body-login">
+                            <button class="modal__body-login-btn" type="submit">Đăng nhập</button>
+                        </div>
+                    </form>
+                    <!---- footer__social ---->
+                    <footer class="footer__social">
+                        <p class="footer__social-title">Hoặc,đăng nhập với</p>
+                        <ul class="footer__social-list">
+                            <li class="footer__social-list-google">
+                                <img src="/assets/img/icon_google_2.png " alt="" class="footer__social-link">
+                                <span class="footer__social-btn-gg">Đăng nhập bằng Google</span>
+                            </li>
+                            <li class="footer__social-list-facebook">
+                                <img src="./assets/img/icon_facebook_2.png" alt="" class="footer__social-link">
+                                <span class="footer__social-btn-fb">Đăng nhập bằng Facebook</span>
+                            </li>
+                        </ul>
+                    </footer>
+                    <div class="footer__forgot">
+                        <p class="footer__forgot-account">Chưa có tài khoản? 
+                        <a href="" class="footer__forgot-register">Đăng ký</a>
+                        </p>
+                    </div>
+                </div>           
+            </div>
+        </div>
+        <!--------------- login modal for header1 java script---------------->
+        <script>
+            // nghe click từ người dùng 
+            const loginaccount = document.querySelector('.js-login')
+            const modal = document.querySelector('.js-modal') 
+            // xử lý 
+            loginaccount.addEventListener('click',showLoginAccount)
+            function showLoginAccount() {
+                modal.classList.add('open')
+            }
+            //----------- js cho nút X để tắt ---------------
+            // cho nút X có class= js-modal-close trong biến modalClose
+            const modalClose = document.querySelector('.js-modal-close')
+            // lắng nghe click cùa người dùng đưa vào function xử lý 
+            modalClose.addEventListener('click',hideLoginAccount)
+
+            function hideLoginAccount() {
+                modal.classList.remove('open')
+            }
+             //------------- khi bấm vào khoảng không của model sẽ đóng lại--------
+            // lắng nghe click cùa người dùng đưa vào function hideBuyTicket xử lý mình đã tạo ở trên 
+            modal.addEventListener('click',hideLoginAccount)
+
+            const modalContainer = document.querySelector('.js-modal-container')
+
+            modalContainer.addEventListener('click',function (event) {
+                event.stopPropagation()
+            })
+        </script>
+        <!--------------- address modal for header2---------------->
+        <div class="modal__header-two js-modal-header-two">
+            <div class="modal__container-header-two js-modal-container-two">
+                <div class="modal__header-two-wrap">
+                    <!-- dấu X bên trên phần header  -->
+                    <div class="modal__close js-modal-close-header-two  ">
+                        <i class="fas fa-times modal__close-header-two-icon "></i>
+                    </div>
+                    <header class="modal__header-content-two">
+                        <i class="fas fa-map-marker-alt header__location-icon"></i>
+                        <h3 class="header__location-text-two">Nhập địa chỉ giao hàng</h3>
+                    </header>
+                    <div class="modal__body-two">
+                        <p class="modal__body-two-title">Thực đơn của chúng tôi có thể thay đổi, dựa trên vị trí của bạn. Để phục vụ bạn tốt nhất, vui lòng cho chúng tôi biết địa điểm giao hàng mong muốn của bạn.</p>
+                        <div class="modal__body-email-two">
+                            <i class="modal__body-two-search ti-search"></i>
+                             <input  type="text" class="modal-input-two" placeholder="Nhập địa chỉ ở đây">
+                        </div>
+                        <p class="modal__body-two-note">Bạn muốn nhận đơn bằng hình thức nào?</p>
+                        <ul class="modal__body-two-check">
+                            <li class="modal__body-two-check-item modal__body-two-check-item-space">
+                                <!-- name phai giong nhau thi moi chon 1 cai duoc  -->
+                                <input type="radio" class="modal__body-two-item-radio" name="check" />
+                                <label for=""><span></span>Giao tận nơi</label>
+                            </li>
+                            <li class="modal__body-two-check-item">
+                                <input type="radio" class="modal__body-two-item-radio" name="check" />
+                                <label for=""><spanTu></spanTu>Tự đến lấy</label>
+                            </li>
+                        </ul>
+                        <div class="modal__body-two-location">
+                            <div class="modal__body-two-btn-blue">
+                                <button class="modal__body-two-btn-item modal__body-two-btn-item-blue">Tiếp tục như khách vãng lai</button>
+                            </div>
+                            <div class="modal__body-two-and">hoặc</div>
+                            <div class="modal__body-two-btn-white">
+                                <button class="modal__body-two-btn-item modal__body-two-btn-item-white">Đăng nhập</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------- address modal for header2 java script---------------->
+        <script>
+            // nghe click từ người dùng, đưa các phần sẽ xử lý vào biến const
+            const address = document.querySelector('.js-address')
+            const modalheader = document.querySelector('.js-modal-header-two') 
+            // xử lý 
+            address.addEventListener('click',showLoginAccount)
+            function showLoginAccount() {
+                modalheader.classList.add('open')
+            }
+            //----------- js cho nút X để tắt ---------------
+            // cho nút X có class= js-modal-close-header-two trong biến modalCloseheadertwo
+            const modalCloseheadertwo = document.querySelector('.js-modal-close-header-two')
+            // lắng nghe click cùa người dùng đưa vào function xử lý 
+            modalCloseheadertwo.addEventListener('click',hideLoginAccount)
+
+            function hideLoginAccount() {
+                modalheader.classList.remove('open')
+            }
+              //------------- khi bấm vào khoảng không của model sẽ đóng lại--------
+            // lắng nghe click cùa người dùng đưa vào function hideBuyTicket xử lý mình đã tạo ở trên 
+            modalheader.addEventListener('click',hideLoginAccount)
+
+            const modalContainerTwo = document.querySelector('.js-modal-container-two')
+
+            modalContainerTwo.addEventListener('click',function (event) {
+                event.stopPropagation()
+            })
+        </script>
+        <!--------------- cart header-toast message java script---------------->
+        <script>
+            
+            function myFunction() {
+            const main = document.getElementById("toast");
+                if (main) {
+                    toast.innerHTML = `
+                    <div class=" toast1 header__toastmess">
+                        <div class="toastmess__body"> 
+                            <h3 class="toastmess__body-title">Giỏ hàng của bạn đang trống</h3>
+                            <p class="toastmess__body-content">Hãy khám phá thực đơn giao món đa dạng của chúng tôi để tìm cho mình lựa chọn phù hợp nhé!</p>
+                        </div>
+                    </div>
+                    `;                         
+                    setTimeout(function() {
+                        // main.remove("toast") 
+                            toast.innerHTML =''
+                    },2000);
+                }
+            }
+        </script>
+        <!-- -----------------------java script header menu list--------------->
+        <script>
+            const $ = document.querySelector.bind(document)
+            const $$ = document.querySelectorAll.bind(document)
+            const  tabs = $$('.header__menu-item')
+            const  panes = $$('.tab-pane')
+            tabs.forEach((tab, index) => {
+                const pane = panes[index]
+
+                tab.onclick = function () {
+                    
+                    $('.header__menu-item.active').classList.remove('active')
+                    $('.tab-pane.active').classList.remove('active')
+
+                    this.classList.add('active')
+                    pane.classList.add('active')
+                }
+            })
+            
+        </script>
+        <script src="./validator.js"></script>
+        <script>
+            // gọi tới hàm Validator và truyền vào 1 objext
+            Validator({
+                form: "#form-1",
+                // rules là array có 2 gì đó và được truyền lại vào Validator
+                rules: [
+                    Validator.isRequired('#fullname'),
+                    Validator.isPassword('#fullpasswd'),
+                       ]
+            });
+        </script>
+    </body>
+</html>
+

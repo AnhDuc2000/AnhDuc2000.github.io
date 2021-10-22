@@ -1,0 +1,884 @@
+
+/* ---------------------------------------------header1----------------------------------------------------------*/
+.header{
+    background-color: #f5f2f0;
+    border-bottom: #242e52 solid 1px;
+    box-shadow: 0px 4px 8px #dfdfde; 
+    /* height: 170px; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    /* đi kèm của fixed; */
+    z-index: 1; 
+    width: 100%;
+}
+
+.header__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+}
+
+.header__interview{
+    width: 151px;
+    margin-left: 20px;
+}
+
+.header__logo-img{
+    width: 100%;
+}
+
+.header__info-btn-country{
+    background-image: url(/assets/img/icon_lang_vi.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f5f2f0;
+    background-size: 43px;
+    width: 53px;
+    height: 59px;
+    border: none;
+    border-left: 1px solid #8d90a1;
+    border-right: 1px solid #8d90a1;
+    padding: 0 29px;
+    cursor: pointer;
+}
+
+.header__info-btn-user{
+    background-image: url(/assets/img/icon_user.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f5f2f0;
+    background-size: 25px;
+    width: 53px;
+    height: 59px;
+    border: none;
+    border-right: 1px solid #8d90a1;
+    margin-right: 1px;
+    cursor: pointer;
+}
+/* ---------------------------------------------header2----------------------------------------------------------*/
+.header__title{
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 56px;
+    background-color: var(--blue-color);
+    align-items: center;
+}
+
+.header__location{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+    border-right: 1px solid #666;
+}
+
+.header__location-icon{
+    color: #f5f2f0;
+    font-size: 28px;
+}
+
+.header__location-text{
+    color: #f5f2f0;
+    font-weight: 800;
+    margin-left: 22px;
+    line-height: 35px;
+}
+
+.header__receipt{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header__receipt-text{
+    color: #f5f2f0;
+    font-weight: 400;
+    font-size: 18px;
+    margin-right: 18px;
+    
+}
+
+.header__receipt-cart-icon{
+    color: var(--white-color);
+    font-size: 24px;
+    position: relative;
+}
+/*---------------- cart header-notice------------------*/
+.header__receipt-notice{
+    position: absolute;
+    background: rgb(234, 90, 55);
+    color: white;
+    border-radius: 20px;
+    padding: 2px 4px;
+    font-size: 10px;
+    line-height: 9px;
+    top: 62px;
+    right: 10px;
+    border: 2px solid;
+}
+/* ---------------------------------------------header3----------------------------------------------------------*/
+.header__menu{
+    height: 58px;
+}
+
+.header__menu-list{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.header__menu-item{
+    list-style: none;
+    margin: 0 22px;
+    cursor: pointer;
+}
+
+.header_menu_item-link{
+    text-decoration: none;
+    color: #242e52;
+}
+/* --------------- login modal for header1----------------  */
+.modal{
+    position:fixed;
+    /* tạo lớp phủ toàn màn hình với position=fixed và cách cạnh =0  */
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    /* lớp phủ màu đen nhẹ  */
+    background-color: rgba(0, 0, 0,0.4);
+    /* bình thường ẩn click vào mới mở  */
+    display: none;
+    align-items: center;
+    /* Bài 46 14:40 ALIGN-ITEMS và justify-content căn giữa cho cửa sổ bằng flexbox  */
+    justify-content: center;
+    /* giúp cho nổi lên trên header lun để không bị đè dưới header  */
+    z-index: 1;
+}
+
+.modal__container{
+    background-color: var(--primary-color); 
+    /* xét cố định kích thước chiều dài rộng  */
+    width:520px;
+    /* Bài 46 40:10 max-width,min-width */
+    max-width: calc(100% - 32px);
+    position: relative;
+    /* cái keyframes ở dưới tạo animation khi cửa sổ hiện ra */
+    /* animation: modalFadeIn ease 0.3s; */
+    height: 720px;
+    border-radius: 3px;
+}
+/*----------phần header login modal------------*/
+.modal__header{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__container-wrap{
+    padding: 35px 33px;
+    position: relative;
+}
+
+.modal__header-img{
+    width: 106px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.modal__header-login{
+    text-align: center;
+    margin-bottom: 38px;
+    color: #242e52;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.modal-input{
+    width: 100%;
+    padding: 14px 0;
+    padding-left: 18px;
+    background-color: var(--primary-color);
+    border: 1px solid #242e52;
+}
+
+.modal__body-email{
+    margin-bottom: 20px;
+}
+
+.modal__body-passwd{
+    margin-bottom: 20px;
+}
+
+.modal__body-note{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__body-note-input{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #242e52;
+    
+}
+
+
+.modal__body-note-forgetpaswd{
+    text-decoration: none;
+    color:#242e52;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.modal__body-note-write{
+    position: relative;
+    top: -4px;
+    font-weight: 300;
+}
+
+.modal__body-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.modal__body-login-btn{
+    width: 380px;
+    height: 50px;
+    color: white;
+    background: #242e52;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer__social{
+    margin-top: 40px;
+}
+.footer__social-title{
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.footer__social-list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.footer__social-list-google{
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.footer__social-list-facebook{
+    height: 50px;
+    background-color: #3b5998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.footer__social-link{
+    width: 20px;
+}
+
+.footer__social-btn-gg{
+    color: black;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.footer__social-btn-fb{
+    color: white;
+    margin-left: 20px;
+}
+
+.footer__forgot{
+    margin-top: 35px;
+    display:flex;
+    justify-content: center;
+}
+
+.footer__forgot-register{
+    color:  #242e52;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.modal__close{
+    position: absolute;
+    color: #666;
+    padding: 12px;
+    right: 15px;
+    top: 10px;
+    padding: 12px;
+    cursor: pointer;
+}
+/* ------------------login modal for header1 java scrpit----------------------------  */
+/* thêm open vào modal để bật cửa sổ trong java script  */
+.modal.open{
+    display: flex;
+}
+
+/* ---------------------------------------------content----------------------------------------------------------*/
+.container{
+    background-color: var(--primary-color);
+    margin-top: 170px;
+}
+/* 
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+} */
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+.grid__row-padding{
+    padding-top: 60px;
+}
+
+.grid__column-4{
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 33.33333%;
+}
+
+.container__img{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.container__img-item{
+    width: 300px;
+    cursor: pointer;
+}
+
+.container__note{
+    position: absolute;
+    right: 23px;
+    border: 2px solid rgb(0, 179, 69);
+    color: rgb(0, 179, 69);
+    font-size: 15px;
+    padding: 9px 6px;
+    border-radius: 14px;
+}
+
+.container__note-suggest{
+    position: absolute;
+    right: 23px;
+    border: 2px solid rgb(0, 95, 188);
+    color: rgb(0, 95, 188);
+    font-size: 15px;
+    padding: 9px 6px;
+    border-radius: 14px;
+}
+
+.container__content{
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.container__list{
+    margin-top: 48px;
+}
+
+.container__content-write{
+    margin-bottom: 110px;
+    font-weight: 500;
+}
+
+.container__content-price{
+    font-size: 21px;
+    color: #024ab2;
+}
+
+.container__button{
+    text-align: center;
+}
+
+.container__button-btn-white{
+    width: 140px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    color: #242e52;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.container__button-btn-blue{
+    width: 140px;
+    height: 50px;
+    background-color: #024ab2;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+
+}
+
+.grid__column-4-space{
+    margin-bottom: 90px;
+}
+/* ---------------------------------------------footer----------------------------------------------------------*/
+.grid__column-8-footer{
+    padding-left: 40px;
+    padding-right: 40px;
+    width: calc(8/12 * 100%);
+}
+
+.grid__column-4-footer{
+    padding-left: 40px;
+    padding-right: 40px;
+    width: calc(4/12 * 100%);
+}
+
+.grid__row-left{
+    display: flex;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.grid__column-4-10{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 33.33333%;
+}
+
+.footer__wrap{
+    border-top: 1px solid #242e52;
+    border-bottom: 1px solid #242e52;
+    padding: 60px 0;
+}
+/*------------------------footer-first-------------------------------*/
+.footer__first-company{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__first-logo{
+    width: 241px;
+    height: 33px;
+}
+
+.footer__first-name-company{
+    color: #242e52;
+    font-weight: 900;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.footer__first-address{
+    color: #242e52;
+    font-weight: 900;
+}
+
+.footer__first-name-address{
+    margin-top: 16px;
+    margin-bottom: 30px;
+    color: #242e52;
+    font-weight: 300;
+}
+
+.footer__first-call{
+    color: #242e52;
+    font-weight: 300;
+    margin-bottom: 32px;
+}
+
+.footer__first-phone{
+    color: #242e52;
+    font-weight: 900;
+    text-decoration: none;
+}
+/*------------------------footer-second-------------------------------*/
+.footer_second-certifi{
+    display: flex;
+    flex-direction:column;
+}
+
+.footer_second-certifi-secure{
+    color: #242e52;
+    font-weight: 900;
+}
+
+.footer_second-certifi-number{
+    color: #242e52;
+    font-weight: 300;
+    margin-top: 15px;
+    margin-bottom: 28px;
+}
+
+.footer_second-certifi-manage{
+    color: #242e52;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.footer_second-certifi-number{
+    color: #242e52;
+    font-weight: 300;
+}
+/*------------------------footer-third-------------------------------*/
+.footer__third-policy{
+    color: #242e52;
+    font-weight: 900;
+}
+
+.footer__third-service{
+    list-style: none;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+.footer__third-policy-two{
+    color: #242e52;
+    font-weight: 900;
+}
+
+.footer__third-service li a{ 
+    color: #242e52;
+    font-weight: 300;
+}
+
+.footer__third-service-two{
+    list-style: none;
+    margin-top: 22px;
+}
+
+.footer__third-service-two li a{
+    color: #242e52;
+    font-weight: 300;
+}
+/*------------------------footer-fourth-------------------------------*/
+.footer__fourth-information{
+    color: #242e52;
+    font-weight: 300;
+}
+
+.footer__fourth-in{
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.footer__input{
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.footer__fourth-resgister{
+    width: 105px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #242e52;
+    color: white;
+    border: none;
+}
+
+.footer__fourth-two-follow{
+    color: #242e52;
+    font-weight: 300;
+    text-align: center;
+}
+
+.footer__fourth-two-img{
+    width: 122px;
+    height: 45px;
+}
+
+.footer__fourth-two{
+    display: flex;
+}
+
+.footer__fourth-two-icon{
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.footer__fourth-two-color{
+    color: #242e52;
+}
+
+.footer__fourth-two-style{
+    list-style: none;
+}
+
+.footer__fourth-two-icon li a{
+    margin: 0 10px;
+}
+
+.finally{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.finally_text{
+    color: #242e52;
+    font-weight: 300;
+}
+/* ----------------------------- address modal for header2----------------------------  */
+.modal__header-two{
+    position:fixed;
+    /* tạo lớp phủ toàn màn hình với position=fixed và cách cạnh =0  */
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    /* lớp phủ màu đen nhẹ  */
+    background-color: rgba(53,68,107,.8);
+    /* bình thường ẩn click vào mới mở  */
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    /* Bài 46 14:40 ALIGN-ITEMS và justify-content căn giữa cho cửa sổ bằng flexbox  */
+    justify-content: center;
+    /* giúp cho nổi lên trên header lun để không bị đè dưới header  */
+    z-index: 1;
+}
+
+.modal__container-header-two{
+    background-color: #024ab2;
+    /* xét cố định kích thước chiều dài rộng  */
+    width:475px;
+    /* Bài 46 40:10 max-width,min-width */
+    max-width: calc(100% - 32px);
+    position: relative;
+    /* cái keyframes ở dưới tạo animation khi cửa sổ hiện ra */
+    /* animation: modalFadeIn ease 0.3s; */
+    height: 665px;
+    border-radius: 5px;
+}
+
+.modal__header-content-two{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 80px;
+}
+
+.header__location-text-two{
+    color: white;
+    font-weight: 800;
+    margin-left: 15px;
+}
+
+.modal__body-two{
+    padding: 50px;
+}
+
+.modal__body-two-title{
+    color: white;
+    font-weight: 400;
+    margin-bottom: 54px;
+}
+
+.modal__body-email-two{
+    position: relative;
+}
+.modal-input-two{
+    width: 100%;
+    padding: 14px 0;
+    background-color: #024ab2;
+    border: 1px solid white;
+    padding-left: 36px;
+}
+/*-----chữ bên trong-------  */
+/* ::placeholder{
+    color: var(--primary-color);
+} */
+/*------chữ khi viết-------  */
+.modal-input-two:focus{
+    color: var(--primary-color);
+}
+
+.modal__body-two-search{
+    position: absolute;
+    top: 34%;
+    left: 11px;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.modal__body-two-note{
+    margin: 28px 0;
+    color: white;
+}
+
+.modal__body-two-check{
+    display: flex;
+}
+
+.modal__body-two-check-item{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: white;
+}
+
+.modal__body-two-item-radio{
+    cursor:pointer;
+    display:inline-block;
+    width:22px;
+    height:22px;
+}
+
+.modal__body-two-check-item-space{
+    margin-right: 88px;
+}
+
+.modal__body-two-and{
+    text-align: center;
+}
+
+.modal__body-two-btn-item{
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+}
+
+.modal__body-two-btn-item-blue{
+    color: white;
+    background-color: #242e52;
+    border: none;
+    border-radius: 3px;
+}
+
+.modal__body-two-btn-item-white{
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.modal__body-two-location{
+    margin-top: 50px;
+}
+
+.modal__body-two-and{
+    color: white;
+    margin: 16px 0;
+}
+
+.modal__close-header-two-icon{
+    color: white;
+}
+/* ------------------address modal for header2 java scrpit----------------------------  */
+/* thêm open vào modal để bật cửa sổ trong java script  */
+.modal__header-two.open{
+    display: flex;
+}
+
+/*-------------------------------cart header-toast message--------------------------------------*/
+.header__toastmess{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px #dfdfde;
+    width: 340px;
+    /* animation: fadeOut linear 0.5s 2s forwards;  */
+}
+
+.header__toastmess::before{
+    content: "";
+    border: 20px solid;
+    border-color: transparent transparent white transparent;
+    position: fixed;
+    top: 82px;
+    right: 11px;
+}
+
+
+.toastmess__body{
+
+}
+
+.toastmess__body-title{
+    margin-bottom: 12px;
+    color: #242e52;
+    font-weight: 500;
+}
+
+.toastmess__body-content{
+    color: #242e52;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.toast1{
+    right: 3px;
+    top: 114px;
+    position: fixed;
+}
+
+@keyframes fadeOut{
+    to{
+        opacity: 0;
+    }
+}
+
+/*-------------------------------java script header menu list--------------------------------------*/
+.header__menu-item.active {
+    font-weight: 900;
+}
+
+.tab-pane.active {
+    display: block !important;
+}
+
+.grid.tab-pane {
+    display: none;
+}
+/*-------------------------------java form validation--------------------------------------*/
+
+.form-group.invalid .form-control {
+    border: 1px solid #f33a58;
+}
+.form-group.invalid .form-message {
+    color: #f33a58;
+  }
+
+
+
+
+
+    
+
+
+
+

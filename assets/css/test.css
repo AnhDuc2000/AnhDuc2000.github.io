@@ -1,0 +1,418 @@
+.header{
+    height: 168px;
+    background-color: var(--primary-color);
+    /* fixed và right,top,left=0 này cho header bám dính khi trượt */
+    position: fixed;
+    top :0;
+    right: 0px;
+    left: 0px;
+    box-shadow: 0px 4px 8px #dfdfde;
+}
+
+.header__wrap{
+    /* giúp khung chung thẳng hàng và căn ra hai phía */
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_item{
+    /* bỏ gạch chân */
+    list-style: none;
+}
+
+.header_item{
+    display: inline-block;
+    height: 56px;
+}
+
+.header_logo{
+    /* margin top,bottom căn giữa logo piza4ps */
+    /* line-height: 56px; */
+    margin-top: auto;
+    margin-bottom: auto; 
+    margin-left: 19px; 
+}
+
+.header_imgpizza1{
+    /* chiều ngang logo piza4ps */
+    width: 144px;
+}
+
+.header_list{
+    /* căn giữa dọc cho usa,user */
+    line-height: 56px;  
+}
+
+.header_link{
+    /* màu và size hình cho usa,user */
+    color: #7c6d68;
+    font-size: 38px;
+}
+
+.header_link-usa{
+    /* cho usa cách đều 2 bên */
+    margin: 0 10px;  
+}
+
+.header_link-user{
+    /* cho user cách đều 2 bên */
+    margin: 0 18px;  
+}
+
+.header_item-gach{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.header_item-gach2{
+    border-right: 2px solid black;
+}
+
+/* css dung chung start */
+.header-bogachchan{
+    /* bỏ gạch chân */
+    text-decoration: none;
+}
+
+.header-cangiua{
+    line-height: 56px;
+}
+/* css dung chung end */
+
+.dauchamduoi{
+    list-style: none;
+}
+
+
+.header_khungchung-color{
+    background-color: #024ab2;
+}
+
+.header_cart,.header_address{
+    /* icon cart, address màu trắng */
+    color: white;
+}
+
+.header_address{
+    /* độ đậm cho chữ Vui lòng nhập địa chỉ */
+    font-weight: 900;
+}
+
+.header__logoaddress{
+    margin-left: 19px;
+}
+
+.header_logocart{
+    margin-right: 19px;
+}
+
+.header-iconaddr{
+    font-size: 25px;
+    margin-right: 24px;
+}
+
+.header-cart{
+    font-size: 25px;
+    margin-left: 24px;
+}
+
+/* header3 */
+.header_khungchung-header3{
+    height: 56px;
+    line-height: 56px;
+    border-bottom: 1px solid black;
+    padding-left: 350px;
+    padding-right: 186px;
+}
+
+.header_navbar{
+    /* flex này giúp căn ngang */
+    display: flex;
+    justify-content: space-around;
+}
+
+.header_navbar_item{
+    list-style: none;
+}
+
+.header_navbar_item-img-Market{
+    margin-top: 15px;
+}
+
+.header_navbar_item-list{
+    /* tạo màu cho các salad,pizza,khai vị */
+    text-decoration: none;
+    color: #242e52;
+    
+}
+
+.header_navbar_item-list:hover{
+    /* trỏ vào đổi màu đen */
+    color: black;
+}
+
+/* phần nội dung */
+.container{
+    /* xem lại bài 40 để hiểu margin-top =168px */
+    margin-top: 168px;
+    height: auto;
+    background-color: #f4f3f0;
+}
+
+.container_aboutpizza{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 130px;
+    margin-left:  15px;
+    margin-right:  15px;
+}
+
+
+
+.container_khungtong{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 74px;
+    margin-left:201px ;
+    margin-right:201px ;
+}
+
+.container_item_imgpizza{
+    width:304px;
+    height:304px;
+    margin-bottom: 53px;
+}
+
+.container_item{
+    /* căn giữa cho hình pizza */
+    text-align: center;
+}
+
+.container_wordpizza{
+    font-weight: 500;
+    text-align: center;
+}
+
+.container_wordpizza2{
+   text-align: center;
+   font-weight: 500;
+}
+
+.container_wordpizza3{
+    color: #465cc1;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 127px;
+    margin-bottom: 29px;
+}
+
+/* button Pizzza ghép và chọn */
+.container_choose{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    list-style: none;
+}
+
+.container_button{
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    padding:18px 32px;
+    border-radius: 3px;
+}
+
+.container_button-change1{
+    background-color: white;
+    margin-right: 16px;
+
+}
+
+.container_button-change2{
+    background-color: #024ab2;
+    color: white;
+}
+
+.container_button:hover{
+    cursor: pointer;
+}
+
+/* phần footer */
+
+.footer{
+    /* margin: 50px 156px; */
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.footer_khungchung{
+    display: flex;
+    margin: 40px 157px;
+}
+
+.footer-khoi{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+/* footer thứ 1 */
+
+.footer_khoinho1-1{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_imgpizzaend{
+    width: 241px;
+    height: 33px;
+}
+
+.footer_cophan{
+    color: #25497d;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.footer_khoinho1-2{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_diachi{
+    color: #25497d;
+}
+
+.footer_duong{
+    margin-top: 16px;
+    margin-bottom: 30px;
+    color: #568abc;
+}
+
+.footer_call{
+    color: #568abc;
+    margin-bottom: 32px;
+}
+
+.footer_phone{
+    color: #242e52;
+    text-decoration: none;
+}
+
+/* footer thứ 2 */
+.footer_khoinho2-1{
+    display: flex;
+    flex-direction:column;
+}
+
+.footer_khoinho2-2{
+    display: flex;
+    flex-direction:column;
+}
+
+.footer_giaychungnhan{
+    color: #25497d;
+}
+
+.footer_sohieugiay{
+    color: #568abc;
+    margin-top: 15px;
+    margin-bottom: 28px;
+}
+
+.footer_giaychungnhan2{
+    color: #25497d;
+    margin-bottom: 15px;
+}
+
+.footer_sohieugiay2{
+    color: #568abc;
+}
+
+/* footer thứ 3 */
+.footer_chsachvaqdinh{
+    color: #25497d;
+}
+
+.footer_dichvuKH{
+    color: #25497d;
+   
+}
+
+.footer_chsachvaqdinh-ds1{
+    list-style: none;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+.footer_chsachvaqdinh-ds1 li a{
+    
+    color: #568abc;
+}
+
+.footer_chsachvaqdinh-ds2{
+    list-style: none;
+    margin-top: 22px;
+}
+
+.footer_chsachvaqdinh-ds2 li a{
+    
+    color: #568abc;
+}
+
+/* footer thứ 4 */
+
+.footer_thongtin{
+    color: #568abc;
+}
+
+.footer_input-nhap{
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    padding:20px 20px;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.footer_input{
+    display: flex;
+    flex-direction: row;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.footer_input-nhap{
+    flex-grow: 1;
+}
+
+.footer_input-input{
+    border-radius: 3px;
+    background-color: #242e52;
+    color: white;
+    border: none;
+}
+
+.footer_imgcertifi{
+    width: 122px;
+    height: 45px;
+}
+
+.footer_khoinho4-2{
+    display: flex;
+}
+
+.footer_khoinho_icon{
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer_khoinho_icon{
+    text-align: center;
+    justify-content: space-around;
+    font-size: 25px;
+}
+
+.footer_mauicon{
+    color: #242e52;
+}

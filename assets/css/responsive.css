@@ -1,0 +1,217 @@
+/*--------------------------------------- Responsive------------------------------------------------------*/
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+}
+
+/* Tablet  */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet{
+        display: none;
+    }
+    .grid__row{
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .grid__column-4{
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 50%;
+    }
+    /* 3 cái header menu dưới đây là tạo thanh trượt ngang và cho chữ thẳng  */
+    .header__menu-list{
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    .header__menu-item{
+        flex-shrink: 0;
+    }
+    .header__menu-list{
+        justify-content: flex-start;
+    }
+    .grid__column-8-footer{
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+
+    }
+    .grid__column-4-footer{
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+    }
+
+    .footer__first-logo {
+        width: 200px;
+        height: auto;
+    }
+
+    .footer__first-call{
+        margin-bottom: 10px;
+    }
+
+    .footer__input{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .container__note-suggest{
+        right: 14px;
+        top: -6px;
+    }
+
+    .container__note{
+        right: 9px;
+    }
+}
+
+/* Mobile  */
+@media (max-width: 739px) {
+    .hide-on-mobile{
+        display: none;
+    }
+    .container{
+        /* margin-top: 113px; */
+    }
+
+    .grid__row{
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+        overflow: hidden;
+    }
+    .grid__column-4{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header__location-text{
+        margin-left: 10px;
+        line-height: 15px;
+        font-size: 14px;
+    }
+    .header__location-icon{
+        font-size: 24px;
+    }
+
+    .modal__body-two {
+        padding: 8px;
+    }
+
+    .modal__container-header-two {
+        height: 580px;
+    }
+
+    .modal__body-two-title {
+        margin-bottom: 35px;
+        text-align: justify;
+    }
+
+    .modal__header-content-two{
+        align-items: center;
+    }
+
+    .modal__close{
+        right: 8px;
+        top: 2px;
+    }
+
+    .modal__header-img{
+        margin-bottom: 20px;
+    }
+
+    .modal__header-login{
+        margin-bottom: 22px;
+    }
+
+    .modal__body-login{
+        margin-top: 20px;
+    }
+
+    .footer__social{
+        margin-top: 25px;
+    }
+    
+    .footer__social-title{
+        margin-bottom: 25px;
+    }
+
+    .footer__forgot{
+        margin-top: 20px;
+    }
+
+    .modal__container{
+        height: 600px;
+    }
+
+    .modal__container-wrap{
+        padding:20px;
+    }
+    /*------- thị thanh trượt ngang ---------*/
+    .header__menu-list{
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    /*-------bỏ hiển thị thanh trượt ngang cho đẹp---------*/
+    .header__menu-list::-webkit-scrollbar{
+        display: none;
+    }
+
+    .header__menu-list{
+        justify-content: flex-start;
+    }
+    /*------- thị thanh trượt ngang ---------*/
+    .header__menu-item{
+        flex-shrink: 0;
+    }
+    .header__menu{
+        display: flex;
+    }
+
+    .container__content-write{
+        margin-bottom: 70px;
+    }
+    /*--------------------footer--------------------------- */
+    .grid__column-8-footer{
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+    .grid__column-4-footer{
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+    }
+
+    .grid__row-left{
+        margin-left: 0;
+        margin-right: 0;
+        flex-wrap: wrap;
+    }
+
+    .grid__column-4-10{
+        width: 50%;
+        margin-bottom: 15px;
+    }
+
+    .footer__first-logo{
+        width: 168px;
+        height: auto;
+    }
+
+    .grid__column-4-10-fixed{
+    display: flex;
+    width: 100%;
+    }
+    .footer__fourth-information {
+        text-align: justify;
+    }
+
+    .footer__first-call {
+        margin-bottom: 10px;
+    }
+}
+
